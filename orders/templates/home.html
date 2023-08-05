@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <div class="container mt-5 pt-5">
+          <div class="row">
+              {% for product in products %}
+              <div>
+                  <img src ="{{product.product_image}}" class="card-img-top img-fluid"/>
+                  <div>
+                      <h5 >{{product.product_name}}</h5>
+                      <p>{{product.product_price}}</p>
+                      <a href="{%url 'order' product.uid %}" class="btn btn-primary">Buy now</a>
+                  </div>
+              </div>
+              {% endfor %}
+          </div>
+      </div>
+
+
+</body>
+</html>

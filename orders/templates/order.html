@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <div class="container mt-5 pt-5">
+          <div class="text-center">
+<!--              <a href="{{ url }}" >Checkout With Instamojo</a>-->
+              {% with url=payment_url %}
+
+              <a href="{{ url|add:'??embed=form/'|safe }}" target="_blank" rel="im-checkout" data-behaviour="remote" data-style="light" data-text="Checkout With Instamojo"></a>
+<!--              <h1>{{ url|add:'??embed=form/'|safe }}</h1>-->
+              {% endwith %}
+          </div>
+      </div>
+     <script src="https://d2xwmjc4uy2hr5.cloudfront.net/im-embed/im-embed.min.js"></script>
+
+</body>
+</html>
